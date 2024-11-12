@@ -67,6 +67,27 @@ input, select {
     box-sizing: border-box;
 }
 
+/* Add a subtle animation when input fields are clicked (focused) */
+input:focus, select:focus {
+    outline: none; /* Remove the default outline */
+    border-color: #4CAF50; /* Change border color to green */
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.6); /* Add a glowing shadow effect */
+    animation: inputFocusAnimation 0.3s ease-in-out; /* Apply animation */
+}
+
+/* Keyframes for the input focus animation */
+@keyframes inputFocusAnimation {
+    0% {
+        transform: scale(1); /* Start with the original size */
+    }
+    50% {
+        transform: scale(1.05); /* Slightly enlarge the input */
+    }
+    100% {
+        transform: scale(1); /* Return to original size */
+    }
+}
+
 /* Button styling */
 button {
     width: 100%;
