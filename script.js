@@ -43,7 +43,7 @@ document.getElementById('footprintForm').addEventListener('submit', function(eve
 });
 
 function goBack() {
-    // Hide result container and show form again
+    // Hide the result and show the form again
     document.getElementById('resultContainer').style.display = 'none';
     document.getElementById('calculator').style.display = 'block';
 }
