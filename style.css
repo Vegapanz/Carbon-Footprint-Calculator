@@ -1,27 +1,55 @@
+/* General body styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    min-height: 100vh; /* Ensure the body takes at least 100% of the viewport height */
+    background-color: #f4f4f4; /* Fallback background color */
+    position: relative; /* To position background pseudo-element */
+    justify-content: flex-start; /* Align content at the top initially */
 }
 
+/* Background image with blur */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/Websites/Carbon Footprint Calculator/building.jpg') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(8px);
+    z-index: -1; /* Keeps the background behind the content */
+}
+
+/* Flexbox to center content in both axes */
 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
     width: 50%;
-    margin: 0 auto;
     padding: 30px;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.8); /* Slight transparency for content box */
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    margin-top: 50px;
+    margin: auto; /* Center horizontally */
+    max-width: 500px; /* Set a max width for larger screens */
 }
 
+/* Headings */
 h1 {
     text-align: center;
     color: #333;
 }
 
+/* Form groups and input fields */
 .form-group {
     margin-bottom: 20px;
+    width: 100%;
 }
 
 label {
@@ -39,6 +67,7 @@ input, select {
     box-sizing: border-box;
 }
 
+/* Button styling */
 button {
     width: 100%;
     padding: 15px;
@@ -55,6 +84,7 @@ button:hover {
     background-color: #45a049;
 }
 
+/* Result container */
 .result {
     margin-top: 30px;
     text-align: center;
@@ -73,6 +103,7 @@ button:hover {
     color: #333;
 }
 
+/* Back Button Styling */
 .back-btn {
     display: inline-block;
     margin-top: 20px;
@@ -85,4 +116,111 @@ button:hover {
 
 .back-btn:hover {
     background-color: #0056b3;
+}
+
+/* Footer Styling */
+footer {
+    width: 100%;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+/* Footer Links */
+footer a {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff;
+    background-color: #007BFF;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+footer a:active {
+    animation: pressAnimation 0.1s forwards;
+}
+
+/* Animation for press effect */
+@keyframes pressAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input, select {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .result p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    input, select {
+        font-size: 12px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .result p {
+        font-size: 14px;
+    }
 }
