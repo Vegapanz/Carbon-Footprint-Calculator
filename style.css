@@ -9,7 +9,7 @@ body {
     background-color: #f4f4f4; /* Fallback background color */
     position: relative; /* To position background pseudo-element */
     justify-content: flex-start; /* Align content at the top initially */
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /* Background image with blur */
