@@ -9,7 +9,6 @@ body {
     background-color: #f4f4f4; /* Fallback background color */
     position: relative; /* To position background pseudo-element */
     justify-content: flex-start; /* Align content at the top initially */
-    overflow: hidden;
 }
 
 /* Background image with blur */
@@ -171,6 +170,51 @@ footer a:hover {
 
 footer a:active {
     animation: pressAnimation 0.1s forwards;
+}
+
+/* Add these styles to your existing style.css */
+.recommendations {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f8ff;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.recommendations h3 {
+    color: #333;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+}
+
+.recommendations h4 {
+    color: #2E8B57;
+    margin-top: 15px;
+}
+
+.recommendations ul {
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+.recommendations li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.good-rating {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.moderate-rating {
+    color: #FFA500;
+    font-weight: bold;
+}
+
+.high-rating {
+    color: #FF4500;
+    font-weight: bold;
 }
 
 /* Animation for press effect */
