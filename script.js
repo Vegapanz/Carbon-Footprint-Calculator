@@ -10,8 +10,8 @@ document.getElementById('footprintForm').addEventListener('submit', function(eve
     let foodType = document.getElementById('food_type').value;
 
     // Constants
-    const emissionsPerGallon = 8.89; // kg CO2 per gallon of gasoline
-    const emissionsPerKWh = 0.92; // kg CO2 per kWh (US average)
+    const emissionsPerGallon = 2.44; // kg CO2 per gallon of gasoline
+    const emissionsPerKWh = 0.85; // kg CO2 per kWh (US average)
 
     // Calculate transportation footprint
     let gallonsUsed = milesDriven / fuelEfficiency;
